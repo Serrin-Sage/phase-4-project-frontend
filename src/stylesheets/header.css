@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: black;
+    font-size: 20px;
+}
+
+.logo-title {
+    
+}
+#logo {
+    color: #F9540C;
+}
+
+.link-container {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+}
+
+.link-text {
+    text-decoration: none;
+    color: #fff;
+    padding: 7px;
+    border: solid 2px transparent;
+}
+.link-text:hover {
+    color: #F9540C;
+}
+
+#signup-text {
+    color: #fff;
+    background-color: #F9540C;
+    border: solid 2px #F9540C;
+    padding: 7px;
+}
+#signup-text:hover {
+    background-color: #bc3900;
+}
+#signup-text:active {
+    border: solid 2px #fff;
+    box-shadow: inset 0 0 5px 0 #762300;
+}

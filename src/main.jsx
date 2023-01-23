@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 import App from './App'
 import userSlice from './features/user'
 import './index.css'
+import './stylesheets/header.css'
+import './stylesheets/mainpage.css'
 
 const store = configureStore({
   reducer: {
