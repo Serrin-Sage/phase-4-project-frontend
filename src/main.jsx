@@ -5,6 +5,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import App from './App'
 import userSlice from './features/user'
+import categorySlice from './features/category'
 import './index.css'
 import './stylesheets/header.css'
 import './stylesheets/mainpage.css'
@@ -12,6 +13,7 @@ import './stylesheets/mainpage.css'
 const store = configureStore({
   reducer: {
     user: userSlice,
+    category: categorySlice,
   }
 })
 
