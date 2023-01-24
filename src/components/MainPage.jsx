@@ -1,7 +1,7 @@
 import CategoryCard from "./CategoryCard"
 
 const MainPage = () => {
-    const categories = ["all", "beer", "brandy", "gin", "rum", "tequila", "vodka", "whiskey", "wine", "other"]
+    const categories = ["All", "Beer", "Brandy", "Gin", "Rum", "Tequila", "Vodka", "Whiskey", "Wine", "Other"]
 
     return (
         <div className="main-page-container">

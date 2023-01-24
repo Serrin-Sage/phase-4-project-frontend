@@ -10,7 +10,7 @@ const CategoryCard = ({ category }) => {
 
     const handleClick = () => {
         dispatch(changeCategory({ category: category }))
-        navigate(`/category/${category}`)
+        navigate(`/drinks/${category}`)
     }
     return (
         <div className="category-card" onClick={handleClick} onMouseOver={() => setHoverOver(true)} onMouseOut={() => setHoverOver(false)}>
