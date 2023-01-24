@@ -2,5 +2,11 @@ body {
     margin: 0;
     height: 99vh;
     background-color: #831621;
+    font-family: TEST;
     /* width: 90+9vw; */
+}
+
+@font-face {
+    font-family: TEST;
+    src: url("./ARLRDBD.ttf")
 }

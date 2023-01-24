@@ -29,13 +29,17 @@ const DrinkPage = () => {
 
   return (
     <div className="drink-page-container">
-        {
-          drinkList.map((drink) => {
-            return (
-              <DrinkDisplay drink={drink}/>
-            )
-          })
-        }
+        <h1 className="drink-page-title">{selectedCategory.category}</h1>
+        <hr/>
+        <div className="drink-page-content">
+          {
+            drinkList.map((drink) => {
+              return (
+                <DrinkDisplay drink={drink}/>
+              )
+            })
+          }
+        </div>
     </div>
   )
 }
