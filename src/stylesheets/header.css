@@ -47,6 +47,7 @@
     background-color: #3891A6;
     border: solid 2px #3891A6;
     padding: 7px;
+    transition: 0.4s;
 }
 #signup-text:hover {
     background-color: black;
