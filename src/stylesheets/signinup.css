@@ -44,6 +44,11 @@
     background-color: #831621;
     color: white;
     cursor: pointer;
+    transition: 0.5s;
+}
+.login-btn:hover {
+    background-color: #fff;
+    color: #831621;
 }
 
 .page-break {
