@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 import { useDispatch } from "react-redux"
-import { changeCategory } from "../../features/category"
-
+import { changeCategory } from "../features/category"
 const CategoryCard = ({ category }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()

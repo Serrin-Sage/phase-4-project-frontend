@@ -1,4 +1,4 @@
-import CategoryCard from "./category/CategoryCard"
+import CategoryCard from "./CategoryCard"
 
 const MainPage = () => {
     const categories = ["all", "beer", "brandy", "gin", "rum", "tequila", "vodka", "whiskey", "wine", "other"]

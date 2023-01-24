@@ -9,6 +9,7 @@ import categorySlice from './features/category'
 import './index.css'
 import './stylesheets/header.css'
 import './stylesheets/mainpage.css'
+import './stylesheets/drinkpage.css'
 
 const store = configureStore({
   reducer: {
