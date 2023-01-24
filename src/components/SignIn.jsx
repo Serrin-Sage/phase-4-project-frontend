@@ -24,10 +24,16 @@ const SignIn = () => {
         </div>
         <div className="page-break"></div>
         <div className="no-account-container">
-          <div>
+          <div className="no-account-content">
             Don't have an account?
             <br/>
             Sign Up Here!
+            <div>
+              <span>Create your own spirit lists!</span><br/>
+              <span>Rate all spirits you've tried!</span><br/>
+              <span>View spirit statistics!</span><br/>
+              <span>Get rewards based on your activity!</span><br/>
+            </div>
           </div>
         </div>
     </div>

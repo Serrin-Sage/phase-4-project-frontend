@@ -18,7 +18,8 @@
 }
 
 .sigin-content {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.807);
+    border: solid 4px black;
     border-radius: 5px;
     font-size: 18px;
     padding: 10px;
@@ -40,13 +41,13 @@
     font-size: 25px;
     letter-spacing: 2px;
     border: solid 2px white;
-    background-color: #f9611f;
+    background-color: #831621;
     color: white;
     cursor: pointer;
 }
 
 .page-break {
-    background-color: #F9540C;
+    background-color: #1C3144;
     width: 3px;
     height: 80vh;
     margin: 1rem;
@@ -56,4 +57,14 @@
     margin: 3rem;
     width: 400px;
     font-size: 28px;
+}
+
+.no-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-account-content {
+    
 }
