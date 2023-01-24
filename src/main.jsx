@@ -10,6 +10,7 @@ import './index.css'
 import './stylesheets/header.css'
 import './stylesheets/mainpage.css'
 import './stylesheets/drinkpage.css'
+import './stylesheets/signinup.css'
 
 const store = configureStore({
   reducer: {

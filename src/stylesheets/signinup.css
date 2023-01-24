@@ -1,0 +1,59 @@
+.user-interface-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #831621;
+    padding-bottom: 6px;
+    cursor: default;
+}
+
+.signin-container {
+    margin: 3rem;
+    width: 400px;
+}
+
+.user-form-title {
+    color: white;
+    font-size: 60px;
+}
+
+.sigin-content {
+    background-color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.user-input {
+    border: solid 2px transparent;
+    background-color: rgb(34, 31, 31);
+    height: 40px;
+    width: 270px;
+    color: white;
+    font-size: 20px;
+    outline: none;
+}
+
+.login-btn {
+    width: 140px;
+    height: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    border: solid 2px white;
+    background-color: #f9611f;
+    color: white;
+    cursor: pointer;
+}
+
+.page-break {
+    background-color: #F9540C;
+    width: 3px;
+    height: 80vh;
+    margin: 1rem;
+}
+
+.no-account-container{
+    margin: 3rem;
+    width: 400px;
+    font-size: 28px;
+}
