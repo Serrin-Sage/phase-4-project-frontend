@@ -5,15 +5,16 @@ const DrinkDisplay = ({ drink }) => {
         {/* <img src={drink.image} alt={`image of ${drink.name}`} /> */}
       </div>
       <div className="drink-info">
-        {drink.name}<br/>
+        <h2 className="drink-name">{drink.name}</h2><br/>
         {drink.description}
       </div>
       <div className="drink-info">
-        {drink.distiller}<br/>
+        ABV<br/>
         {drink.abv}
       </div>
       <div className="drink-info">
-        {drink.location}
+        <h3>Distiller:</h3> {drink.distiller} <br/>
+        {drink.dist_location}
       </div>
       <div className="add-btn-container">
           <button className="add-btn">
