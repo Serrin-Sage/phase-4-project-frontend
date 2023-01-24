@@ -4,14 +4,15 @@ import DrinkDisplay from "./DrinkDisplay"
 
 const DrinkPage = () => {
   const selectedCategory = useSelector((state) => state.category.value)
-  const [drinkList, setDrinkList] = useState([])
-  let drinkUrl = "http://localhost:8000/drinks"
-  // if (selectedCategory.category === 'All') {
-  //     let drinkUrl = "http://localhost:8000/drinks"
-  //   } else {
-  //     let drinkUrl = `http://localhost:8000/drinks/${selectedCategory.category}`
-  //   }
+  const [drinkList, setDrinkList] = useState([])  
+ 
   useEffect(() => {
+    let drinkUrl = ""
+    if (selectedCategory.category == "All") {
+      drinkUrl = "http://localhost:8000/drinks"
+    } else {
+      drinkUrl = `http://localhost:8000/drinks/${selectedCategory.category}`
+    }
     const fetchDrinks = async () => {
       let req = await fetch(drinkUrl)
       let res = await req.json()
