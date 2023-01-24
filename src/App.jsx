@@ -10,7 +10,6 @@ import DrinkPage from './components/drinks/DrinkPage'
 
 function App() {
   const selectedCategory = useSelector((state) => state.category.value)
-  console.log(selectedCategory)
   return (
     <div className="App">
       <Header />
@@ -19,7 +18,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path={`/category/${selectedCategory.category}`} element={<DrinkPage />}/>
+        <Route path={`/drinks/${selectedCategory.category}`} element={<DrinkPage />}/>
       </Routes>
     </div>
   )

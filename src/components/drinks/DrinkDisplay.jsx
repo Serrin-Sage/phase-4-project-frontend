@@ -1,6 +1,9 @@
 const DrinkDisplay = ({ drink }) => {
   return (
     <div className="drink-card">
+      <div className="drink-image-div">
+        {/* <img src={drink.image} alt={`image of ${drink.name}`} /> */}
+      </div>
       <div className="drink-info">
         {drink.name}<br/>
         {drink.description}
