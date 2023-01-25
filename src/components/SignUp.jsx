@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { resetSignUpForm } from "../features/clearsignup"
+import { login } from "../features/user"
+
 const SignUp = () => {
   const defaultForm = useSelector((state) => state.clearsignup.value)
   const dispatch = useDispatch()
@@ -23,12 +25,14 @@ const SignUp = () => {
         password: e.target.password.value,
         age: e.target.age.value,
         location: e.target.location.value,
-        logged_in: 1
+        logged_in: true
       })
     })
     let res = await req.json()
     if (req.ok) {
       dispatch(resetSignUpForm())
+      console.log(res)
+      dispatch(login(res))
       navigate('/profile')
     } else {
       console.log("AN ERROR OCCURED")
