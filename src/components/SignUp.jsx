@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { resetSignUpForm } from "../features/clearsignup"
 import { login } from "../features/user"
+import { loginStatus } from "../features/loginStatus"
 
 const SignUp = () => {
   const defaultForm = useSelector((state) => state.clearsignup.value)
@@ -11,7 +12,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let req = await fetch("http://localhost:8000/user", {
+    let req = await fetch("http://localhost:8000/create_user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,8 +32,8 @@ const SignUp = () => {
     let res = await req.json()
     if (req.ok) {
       dispatch(resetSignUpForm())
-      console.log(res)
       dispatch(login(res))
+      dispatch(loginStatus(true))
       navigate('/profile')
     } else {
       console.log("AN ERROR OCCURED")

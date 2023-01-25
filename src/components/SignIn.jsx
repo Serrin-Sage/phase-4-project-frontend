@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { useState } from "react"
 import { login } from "../features/user"
+import { loginStatus } from "../features/loginStatus"
 
 const SignIn = () => {
   const navigate = useNavigate()
@@ -29,6 +30,7 @@ const SignIn = () => {
     let res = await req.json()
     if (req.ok) {
       dispatch(login(res))
+      dispatch(loginStatus(true))
       navigate('/profile')
     } else {
       console.log("LOGIN FAILED")
