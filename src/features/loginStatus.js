@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const statusSlice = createSlice({
-    name: "user",
+    name: "status",
     initialState: { value: { loggedIn: false }},
 
     reducers: {

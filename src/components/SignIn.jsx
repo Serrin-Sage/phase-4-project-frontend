@@ -30,7 +30,7 @@ const SignIn = () => {
     let res = await req.json()
     if (req.ok) {
       dispatch(login(res))
-      dispatch(loginStatus(true))
+      dispatch(loginStatus({ loggedIn: true}))
       navigate('/profile')
     } else {
       console.log("LOGIN FAILED")
