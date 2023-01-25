@@ -17,10 +17,8 @@ const DrinkPage = () => {
       let req = await fetch(drinkUrl)
       let res = await req.json()
       if (req.ok) {
-        console.log(res)
         setDrinkList(res)
       } else {
-        console.log(req)
         console.log("NO ROUTE FOUND")
       }
     }
