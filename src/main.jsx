@@ -7,6 +7,8 @@ import App from './App'
 import userSlice from './features/user'
 import categorySlice from './features/category'
 import clearSignUp from './features/clearsignup'
+import statusSlice from './features/loginStatus'
+
 import './index.css'
 import './stylesheets/header.css'
 import './stylesheets/mainpage.css'
@@ -18,6 +20,7 @@ const store = configureStore({
     user: userSlice,
     category: categorySlice,
     clearsignup: clearSignUp,
+    status: statusSlice,
   }
 })
 
