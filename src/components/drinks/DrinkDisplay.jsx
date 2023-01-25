@@ -2,7 +2,7 @@ const DrinkDisplay = ({ drink }) => {
   return (
     <div className="drink-card">
       <div className="drink-image-div">
-        {/* <img src={drink.image} alt={`image of ${drink.name}`} /> */}
+        <img src={drink.image} alt={`image of ${drink.name}`} />
       </div>
       <div className="drink-info">
         <h2 className="drink-name">{drink.name}</h2><br/>

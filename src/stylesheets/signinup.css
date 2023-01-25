@@ -36,7 +36,7 @@
 }
 
 .login-btn {
-    width: 140px;
+    width: fit-content;
     height: 50px;
     font-size: 25px;
     letter-spacing: 2px;
@@ -72,4 +72,16 @@
 
 .no-account-content {
     
+}
+
+/*** SIGN UP STYLE ***/
+.signup-container {
+
+}
+.signup-content {
+    max-width: 800px;
+}
+
+.name-input-container {
+    display: flex;
 }
