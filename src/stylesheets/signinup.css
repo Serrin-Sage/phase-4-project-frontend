@@ -85,3 +85,21 @@
 .name-input-container {
     display: flex;
 }
+
+/*** ERRORS ***/
+.login-error {
+    min-height: 21px;
+    color: red;
+    animation: fadein 5s linear;
+    transition: 5s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
