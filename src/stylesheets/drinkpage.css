@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+.empty-div {
+    width: 100px;
+}
+
 .drink-page-title{
     font-size: 55px;
 }
@@ -69,4 +73,68 @@
     border: solid 2px black;
     box-shadow: inset 0 0 5px 1px black;
     transform: scale(0.9);
+}
+
+/*** Arrow ***/
+.arrow {
+    position: relative;
+    color: #333;
+    font-family: Arial sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+}
+
+.arrow:before,
+.arrow:after {
+    content: "";
+    background: black;
+    -webkit-border-radius: 0.2em;
+    border-radius: 0.2em;
+    display: block;
+    height: 0.5em;
+    position: absolute;
+    right: 0;
+    width: 1em;
+}
+
+.arrow.left:before,
+.arrow.left:after {
+    right: 9rem;
+}
+
+.arrow.left:before {
+    top: 2.8em;
+}
+
+.arrow.left:after,
+.arrow.left:before,
+.arrow.right:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+arrow.left:before,
+.arrow.right:before,
+.arrow.left:after {
+    top: 2.4em;
+}
+
+.arrow.left:after,
+.arrow.right:after {
+    bottom: 0.66em;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.arrow:hover,
+#arrow:focus {
+    color: rgb(157, 0, 0);
+}
+
+.arrow:hover:before,
+.arrow:hover:after,
+.arrow:focus:before,
+.arrow:focus:after {
+    background: #c00;
 }
