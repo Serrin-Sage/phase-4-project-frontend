@@ -27,7 +27,17 @@ const DrinkPage = () => {
 
   return (
     <div className="drink-page-container">
-        <h1 className="drink-page-title">{selectedCategory.category}</h1>
+      <div className="drink-title-container">
+        <div>
+          
+        </div>
+        <div>
+          <h1 className="drink-page-title">{selectedCategory.category}</h1>
+        </div>
+        <div>
+
+        </div>
+      </div>
         <hr/>
         <div className="drink-page-content">
           {
