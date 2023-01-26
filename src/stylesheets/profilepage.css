@@ -1,0 +1,79 @@
+.profile-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2rem;
+    
+}
+.profile-content {
+    border: solid 4px #3891A6;
+    border-radius: 10px;
+    padding: 0 2rem 2rem 2rem;
+    min-width: 400px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #1C3144;
+}
+.profile-details {
+    display: flex;
+    text-align: left;
+}
+.profile-detail-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.drink-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 4px #fff;
+    background-color: #1C3144;
+    border-radius: 10px;
+    width: 300px;
+    color: #fff;
+}
+
+.drink-list-content {
+    height: 260px;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: auto;
+    background-color: #831621;
+    border-radius: 10px;
+}
+
+.drink-list-content::-webkit-scrollbar {
+    display: none;
+}
+
+.drink-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.drink {
+    font-size: 20px;
+}
+
+.stats-button {
+    width: fit-content;
+    height: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    border: solid 2px white;
+    background-color: #831621;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 10px;
+}
