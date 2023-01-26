@@ -2,6 +2,10 @@
     text-align: center;
     cursor: default;
 }
+.drink-title-container{
+    display: flex;
+    justify-content: space-evenly;
+}
 .drink-page-title{
     font-size: 55px;
 }
