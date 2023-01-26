@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 import DrinkDisplay from "./DrinkDisplay"
 
 const DrinkPage = () => {
@@ -29,12 +30,12 @@ const DrinkPage = () => {
     <div className="drink-page-container">
       <div className="drink-title-container">
         <div>
-          
+          <Link to="/" className="arrow left"></Link>
         </div>
         <div>
           <h1 className="drink-page-title">{selectedCategory.category}</h1>
         </div>
-        <div>
+        <div className="empty-div">
 
         </div>
       </div>

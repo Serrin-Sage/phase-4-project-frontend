@@ -4,7 +4,17 @@ import { addDrink } from "../../features/drinklist"
 const DrinkDisplay = ({ drink }) => {
   const dispatch = useDispatch()
   const allDrinks = useSelector((state) => state.drinklist.value)
-  
+  const checkLogin = useSelector((state) => state.status.value)
+
+  const addDrinkToList = (drink) => {
+    if (checkLogin.loggedIn === false) {
+      console.log("NOT SIGNED IN")
+      return
+    }
+    else {
+      dispatch(addDrink(drink))
+    }
+  }
   return (
     <div className="drink-card">
       <div className="drink-image-div">
@@ -23,7 +33,7 @@ const DrinkDisplay = ({ drink }) => {
         {drink.dist_location}
       </div>
       <div className="add-btn-container">
-          <button className="add-btn" onClick={() => dispatch(addDrink(drink))}>
+          <button className="add-btn" onClick={() => addDrinkToList(drink)}>
             Add To List
           </button>
       </div>
