@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { useState } from "react"
 import { login } from "../features/user"
@@ -68,14 +68,18 @@ const SignIn = () => {
         <div className="page-break"></div>
         <div className="no-account-container">
           <div className="no-account-content">
+            <div className="no-account-content-header">
             Don't have an account?
             <br/>
             Sign Up Here!
-            <div>
-              <span>Create your own spirit lists!</span><br/>
-              <span>Rate all spirits you've tried!</span><br/>
-              <span>View spirit statistics!</span><br/>
-              <span>Get rewards based on your activity!</span><br/>
+            </div>
+            <div className="no-account-content-body">
+              <span>🥃 Create your own spirit lists!</span><br/>
+              <span>🍸 Rate all spirits you've tried!</span><br/>
+              <span>🍹 View spirit statistics!</span><br/>
+              <span>🎖 Get rewards based on your activity!</span><br/> <br/>
+              <Link to="/signup" className="register-btn" >Register!</Link>
+              {/* <button className="register-btn"> 🍻 Register! 🍻 </button> */}
             </div>
           </div>
         </div>
