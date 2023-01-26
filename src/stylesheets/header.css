@@ -5,11 +5,15 @@
     min-height: 90px;
     background-color: black;
     font-size: 20px;
+    padding: 7px;
     /* border-bottom: solid 2px #512981; */
+}
+.logo-image {
+    height: 80px;
 }
 
 .logo-title {
-    
+    width: fit-content;
 }
 #logo {
     color: #3891A6;

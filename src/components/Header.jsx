@@ -19,7 +19,9 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo-title">
-                <Link to="/" className="link-text" id="logo">LOGO/NAME</Link>
+                <Link to="/" id="logo">
+                    <img src="https://cdn.discordapp.com/attachments/751140341348040826/1068297686501036052/phase-4-logo.png" alt="Our Sick ASS LOGO" className="logo-image"/>
+                </Link>
             </div>
             <div>
                 
