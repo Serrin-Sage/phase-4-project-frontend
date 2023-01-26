@@ -31,7 +31,7 @@
     border: solid 2px transparent;
     height: 20px;
     width: 120px;
-    
+    cursor: pointer;
 }
 .link-text:hover {
     color: #3891A6;
@@ -39,7 +39,7 @@
 
 #signin-text:active {
     border: solid 2px #3891A6;
-    box-shadow: inset 0 0 5px 0 #762300;
+    box-shadow: inset 0 0 5px 0 #831621;
 }
 
 #signup-text {
@@ -54,5 +54,24 @@
 }
 #signup-text:active {
     border: solid 2px #fff;
-    box-shadow: inset 0 0 5px 0 #762300;
+    box-shadow: inset 0 0 5px 0 #831621;
+}
+
+#profile-btn:active{
+    border: solid 2px #3891A6;
+     box-shadow: inset 0 0 5px 0 #831621;
+}
+#logout-btn {
+    border: solid 2px #fff;
+    background-color: #c8091c;
+    transition: 0.4s;
+}
+#logout-btn:hover {
+    color: #c8091c;
+    background-color: #fff;
+}
+#logout-btn:active {
+    border: solid 2px #c8091c;
+    background-color: #fff;
+    color: #c8091c;
 }

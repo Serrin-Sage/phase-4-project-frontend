@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { loginStatus } from "../features/loginStatus"
 import { logout } from "../features/user"
+import { resetList } from "../features/drinklist"
 
 const Header = () => {
     const checkLogin = useSelector((state) => state.status.value)
@@ -12,6 +13,7 @@ const Header = () => {
     const logoutUser = () => {
         dispatch(logout())
         dispatch(loginStatus({ loggedIn: false}))
+        dispatch(resetList())
         navigate('/')
     }
     return (
@@ -24,8 +26,8 @@ const Header = () => {
             </div>
             {checkLogin.loggedIn ? 
                 <div className="link-container">
-                    <Link to="/profile" className="link-text">Profile</Link>
-                    <div className="link-text" onClick={() => logoutUser()}>Logout</div>
+                    <Link to="/profile" className="link-text" id="profile-btn">Profile</Link>
+                    <div className="link-text" id="logout-btn"onClick={() => logoutUser()}>Logout</div>
                 </div> 
                 : 
                 <div className="link-container">
