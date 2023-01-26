@@ -77,3 +77,8 @@
     transition: 0.5s;
     margin: 10px;
 }
+
+.stats-container {
+   transform: translateX(220px);
+   margin: 4rem;
+}

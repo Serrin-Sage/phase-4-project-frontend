@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Stats from "./Stats"
 
 const ProfilePage = () => {
@@ -7,6 +7,24 @@ const ProfilePage = () => {
   const loggedIn = useSelector((state) => state.status.value)
   const allDrinks = useSelector((state) => state.drinklist.value)
   const [viewStats, setViewStats] = useState(false)
+
+  const ScrollToBottom = () => {
+    const messagesEndRef = useRef(null)
+
+    const scrollToBottom = () => {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+
+    useEffect(() => {
+      scrollToBottom();
+    }, [])
+
+    useEffect(() => {
+      scrollToBottom()
+    })
+
+    return <div ref={messagesEndRef} />
+  }
 
   return (
     <div className="profile-page-container">
@@ -57,6 +75,7 @@ const ProfilePage = () => {
       </div>
       
       {viewStats ? <Stats allDrinksList={allDrinks.list}/> :  null }
+      <ScrollToBottom />
     </div>
   )
 }
