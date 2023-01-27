@@ -49,7 +49,7 @@ const Stats = ({allDrinksList}) => {
                     dataKey="value"
                     isAnimationActive={true}
                     data={sampleData}
-                    cx={200}
+                    cx={300}
                     cy={200}
                     outerRadius={150}
                     fill="#8884d8"

@@ -79,6 +79,10 @@
 }
 
 .stats-container {
-   transform: translateX(220px);
+   transform: translateX(70px);
    margin: 4rem;
+   background-color: rgba(0, 0, 0, 0.492);
+   border: solid 4px black;
+   border-radius: 15px;
+   max-width: 590px;
 }
