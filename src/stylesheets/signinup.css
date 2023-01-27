@@ -132,8 +132,14 @@
 .login-error {
     min-height: 21px;
     color: red;
-    animation: fadein 5s linear;
     transition: 5s;
+}
+
+.password-error {
+    margin: 0;
+    margin-top: 2rem;
+    color: red;
+    min-height: 25px;
 }
 
 @keyframes fadein {

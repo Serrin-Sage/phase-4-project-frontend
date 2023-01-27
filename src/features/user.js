@@ -5,7 +5,6 @@ const initialStateValue = {
     last_name: "",
     username: "",
     email: "",
-    password: "",
     age: "",
     location: "",
     logged_in: 0,
