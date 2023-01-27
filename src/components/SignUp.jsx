@@ -9,9 +9,22 @@ const SignUp = () => {
   const defaultForm = useSelector((state) => state.clearsignup.value)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const [passwordError, setPasswordError] = useState(false)
+
+  const removePasswordError = () => {
+    setTimeout(() => {
+      setPasswordError(false)
+    },2500)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (e.target.password.value !== e.target.confirmPassword.value) {
+      console.log("PASSWORD DO NOT MATCH")
+      setPasswordError(true)
+      removePasswordError()
+      return
+    }
     let req = await fetch("http://localhost:8000/create_user", {
       method: "POST",
       headers: {
@@ -33,12 +46,13 @@ const SignUp = () => {
     if (req.ok) {
       dispatch(resetSignUpForm())
       dispatch(login(res))
-      dispatch(loginStatus(true))
+      dispatch(loginStatus({ loggedIn: true }))
       navigate('/profile')
     } else {
       console.log("AN ERROR OCCURED")
     }
   }
+
   return (
     <div className="user-interface-container">
       <div className="signup-container">
@@ -83,16 +97,22 @@ const SignUp = () => {
             </label>
             <br />
             <br/>
-            <label >
-              Create a password: <br />
-              <input type="password" name="password" className="user-input" defaultValue={defaultForm.password}/>
-            </label>
+            <div className="name-input-container">
+              <label >
+                Create a password: <br />
+                <input type="password" name="password" className="user-input" defaultValue={defaultForm.password}/>
+              </label>
+              <label >
+                Confirm password: <br />
+                <input type="password" name="confirmPassword" className="user-input" defaultValue={defaultForm.password}/>
+              </label>
+            </div>
+            {passwordError ? <p className="password-error">Passwords do not match</p> : <p className="password-error"></p>}
             <br/>
             <br/>
             <input type="submit" value="Create Account" className="login-btn"/>
             <br/>
           </form>
-          {/* <button onClick={() => { dispatch(resetSignUpForm()) }}>Clear Form</button> */}
         </div>
       </div>
     </div>
