@@ -7,14 +7,27 @@ import { resetList } from "../features/drinklist"
 
 const Header = () => {
     const checkLogin = useSelector((state) => state.status.value)
+    const currentUser = useSelector((state) => state.user.value)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const logoutUser = () => {
-        dispatch(logout())
-        dispatch(loginStatus({ loggedIn: false}))
-        dispatch(resetList())
-        navigate('/')
+    const logoutUser = async () => {
+        let req = await fetch(`http://localhost:8000/update_user/${currentUser.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                logged_in: 0
+            })
+        })
+        if (req.ok) {
+            dispatch(loginStatus({ loggedIn: false}))
+            dispatch(logout())
+            dispatch(resetList())
+            navigate('/')
+        }
     }
     return (
         <div className="header">

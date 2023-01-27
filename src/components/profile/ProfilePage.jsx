@@ -8,21 +8,36 @@ const ProfilePage = () => {
   const allDrinks = useSelector((state) => state.drinklist.value)
   const [viewStats, setViewStats] = useState(false)
 
+  useEffect(() => {
+    const updateLogin = async () => {
+      let req = await fetch(`http://localhost:8000/update_user/${currentUser.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          logged_in: 1
+        })
+      })
+      let res = await req.json()
+    }
+
+    updateLogin()
+  })
+
   const ScrollToBottom = () => {
     const messagesEndRef = useRef(null)
 
     const scrollToBottom = () => {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
     }
-
     useEffect(() => {
       scrollToBottom();
     }, [])
-
     useEffect(() => {
       scrollToBottom()
     })
-
     return <div ref={messagesEndRef} />
   }
 
