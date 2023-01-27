@@ -41,7 +41,7 @@ const Stats = ({allDrinksList}) => {
         return entry.name
     }
 
-    const colorArray = ["#02B2DA", "#0068BD", "#7B1E90", "#18CB5D", "#E6721A", "#B51F1F", "#C13CBC", "#D8D80C", "#232528"];
+    const colorArray = ["#02B2DA", "#0068BD", "#7B1E90", "#18CB5D", "#E6721A", "#B51F1F", "#C13CBC", "#D8D80C", "#025302"];
     return (
         <div className="stats-container">
             <PieChart width={800} height={400}>
