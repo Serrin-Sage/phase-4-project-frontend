@@ -49,20 +49,15 @@ const SignUp = () => {
             <div className="name-input-container">
               <label className="user-form-label">
                 Enter First Name: <br/>
-                <input type="text" name="first_name" className="user-input" defaultValue={defaultForm.first_name} placeholder="Enter your username..." />
+                <input type="text" name="first_name" className="user-input" />
               </label>
               <label className="user-form-label">
                 Enter Last Name: <br/>
-                <input type="text" name="last_name" className="user-input" defaultValue={defaultForm.last_name} placeholder="Enter your password..." />
+                <input type="text" name="last_name" className="user-input" />
                 <br />
               </label>
             </div>
             <br />
-            <label >
-              Create a Username: <br/>
-              <input type="text" name="username" className="user-input" defaultValue={defaultForm.username} />
-            </label>
-            <br/>
             <br/>
             <label >
               Enter Email Adress: <br/>
@@ -83,14 +78,21 @@ const SignUp = () => {
             <br/>
             <br/>
             <label >
+              Create a Username: <br />
+              <input type="text" name="username" className="user-input" defaultValue={defaultForm.username} />
+            </label>
+            <br />
+            <br/>
+            <label >
               Create a password: <br />
               <input type="password" name="password" className="user-input" defaultValue={defaultForm.password}/>
             </label>
             <br/>
+            <br/>
             <input type="submit" value="Create Account" className="login-btn"/>
             <br/>
           </form>
-          <button onClick={() => { dispatch(resetSignUpForm()) }}>Clear Form</button>
+          {/* <button onClick={() => { dispatch(resetSignUpForm()) }}>Clear Form</button> */}
         </div>
       </div>
     </div>
