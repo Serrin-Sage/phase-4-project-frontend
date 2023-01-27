@@ -75,9 +75,9 @@ const SignIn = () => {
             </div>
             <div className="no-account-content-body">
               <span>🥃 Create your own spirit lists!</span><br/>
-              <span>🍸 Rate all spirits you've tried!</span><br/>
+              <span className="unfinished">🍸 Rate all spirits you've tried!</span><br/>
               <span>🍹 View spirit statistics!</span><br/>
-              <span>🎖 Get rewards based on your activity!</span><br/> <br/>
+              <span className="unfinished">🎖 Get rewards based on your activity!</span><br/> <br/>
               <Link to="/signup" className="register-btn" >Register!</Link>
               {/* <button className="register-btn"> 🍻 Register! 🍻 </button> */}
             </div>

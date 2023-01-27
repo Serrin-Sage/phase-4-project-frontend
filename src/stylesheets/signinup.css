@@ -91,6 +91,10 @@
     margin-left: 30px;
     padding: 2px
 }
+.unfinished {
+    text-decoration: line-through;
+}
+
 .register-btn {
     width: fit-content;
     height: 40px;
