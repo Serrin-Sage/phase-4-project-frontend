@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux"
 import { addDrink } from "../../features/drinklist"
 
-const DrinkDisplay = ({ drink }) => {
+const DrinkDisplay = ({ drink, setShowDrinkAlert }) => {
   const dispatch = useDispatch()
   const allDrinks = useSelector((state) => state.drinklist.value)
   const checkLogin = useSelector((state) => state.status.value)
 
   const addDrinkToList = (drink) => {
     if (checkLogin.loggedIn === false) {
-      console.log("NOT SIGNED IN")
+      setShowDrinkAlert(true)
       return
     }
     else {

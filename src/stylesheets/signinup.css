@@ -43,6 +43,7 @@
     letter-spacing: 2px;
     border: solid 2px white;
     background-color: #831621;
+    text-decoration: none;
     color: white;
     cursor: pointer;
     transition: 0.5s;
